@@ -14,7 +14,7 @@ const config = {
   planetas: [
     { id: "p1", gif: "https://res.cloudinary.com/xoktvuw1/image/upload/v1790127077/image2.gif", x: 30, y: 12, size: 130, href: null,               alt: "Planeta" },
     { id: "p2", gif: "https://res.cloudinary.com/xoktvuw1/image/upload/v1790127077/image2.gif", x: 62, y: 10, size: 99, href: null,               alt: "Planeta" },
-    { id: "p3", gif: "https://res.cloudinary.com/xoktvuw1/image/upload/v1790127077/image2.gif", x: 18, y: 24, size: 100, href: "hombre-negocios.html", alt: "El hombre de negocios" },
+    { id: "p3", gif: "https://res.cloudinary.com/xoktvuw1/image/upload/v1790127077/image2.gif", x: 18, y: 24, size: 100, href: "negocios.html", alt: "El hombre de negocios" },
     { id: "p4", gif: "https://res.cloudinary.com/xoktvuw1/image/upload/v1790127077/image2.gif", x: 78, y: 40, size: 145, href: "farolero.html",     alt: "El farolero" },
     { id: "p5", gif: "https://res.cloudinary.com/xoktvuw1/image/upload/v1790127077/image2.gif", x: 22, y: 62, size: 168, href: null,               alt: "Planeta" },
     { id: "p6", gif: "https://res.cloudinary.com/xoktvuw1/image/upload/v1790127077/image2.gif", x: 12, y: 76, size: 110, href: null,               alt: "Planeta" },
