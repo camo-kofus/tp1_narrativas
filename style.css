@@ -123,21 +123,16 @@ html, body {
 /* Planetas con hipervínculo (llevan a nivel 2) */
 a.planeta {
   cursor: pointer;
-  display: block; /* Esto asegura que el enlace actúe como un botón sólido */
-  pointer-events: auto; /* Asegura que responda a los clicks */
 }
 
-/* Efecto visual brillante al pasar el mouse por los planetas con link */
 a.planeta:focus-visible,
 a.planeta:hover {
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
-}
-
-/* Contenedor Webtoon (Corregido y separado) */
-.contenedor-webtoon {
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
+  .contenedor-webtoon {
   width: 100%;
   max-width: 500px; /* mismo ancho que usás en tus otras páginas */
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
 }
