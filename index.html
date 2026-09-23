@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Principito — Índice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="contenedor-webtoon" style="background-image: url('https://res.cloudinary.com/xoktvuw1/image/upload/v1790127583/fondouno.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <!-- Contenedor único, formato vertical tipo webtoon (scroll largo) -->
+  <main id="escena" class="escena">
+
+    <!-- Bloque central: título + asteroide B612 + hipervínculo al Principito -->
+    <section class="centro">
+
+      <a href="#" id="principito" class="principito" aria-describedby="burbuja">
+        <img src="https://res.cloudinary.com/xoktvuw1/image/upload/v1790130868/asteroide.png" class="asteroide">
+      </a>
+
+      <div id="burbuja" class="burbuja" role="tooltip" hidden>
+        <!-- Texto de la burbuja de pensamiento: editable en script.js (config.principito.pensamiento) -->
+      </div>
+
+      <h1 class="titulo">El Principito</h1>
+    </section>
+
+    <!-- Los planetas (decorativos y con hipervínculo) se inyectan desde script.js
+         a partir del arreglo `config.planetas`. No hace falta tocar este HTML
+         para agregar, mover o enlazar un planeta nuevo. -->
+    <div id="capa-planetas" class="capa-planetas" aria-hidden="false"></div>
+
+  </main>
+
+  <script src="script.js"></script>
+ </div>
+</body>
+</html>

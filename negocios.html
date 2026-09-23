@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Viaje del Principito - Webtoon Interactivo</title>
+    <!-- ENLACE A TU HOJA DE ESTILOS EXTERNA -->
+    <link rel="stylesheet" href="negocios.css">
+</head>
+<body>
+
+    <div class="contenedor-webtoon">
+        
+        <!-- NIVEL 1: PORTADA DEL PLANETA -->
+        <div class="portada-planeta" id="portadaPlaneta">
+    <h1 id="tituloPlaneta">Nivel 2.1: El planeta del Hombre de Negocios</h1>
+    <p class="descripcion-planeta" id="citaPlaneta">"Soy un hombre serio, ¡no tengo tiempo de fantasear!"</p>
+    <!-- Le agregamos la clase boton-portada al final -->
+    <button class="boton-enlace boton-portada" onclick="comenzarCapitulo()">Hablar con el hombre de negocios</button>
+</div>
+
+        <!-- NIVEL 2 y 3: ESCENA DE DIÁLOGOS -->
+        <div class="escena-interactiva" id="escenaInteractiva" style="display: none;">
+            
+            <!-- Personajes PNG lado a lado -->
+            <div class="escena-personajes">
+                <!-- Cuadro del Adulto con fondo naranja -->
+                <div class="personaje adulto-placeholder" id="imgAdulto">
+                    <img src="https://res.cloudinary.com/xoktvuw1/image/upload/v1790119062/hombre_d_negocios.png" alt="Hombre de Negocios">
+                </div>
+                
+                <!-- Cuadro del Principito con fondo azul -->
+                <div class="personaje principito-placeholder" id="imgPrincipito">
+                    <img src="https://res.cloudinary.com/xoktvuw1/image/upload/v1790120738/principito_para_di%C3%A1logo.png" alt="El Principito">
+                </div>
+            </div>
+
+            <!-- Caja de diálogos interactiva -->
+            <div class="caja-dialogo" id="cajaTexto" onclick="avanzarDialogo()">
+                <span id="textoActual">Cargando diálogo...</span>
+                <div class="instruccion" id="instruccionToca">Toca para continuar...</div>
+            </div>
+
+            <!-- Menú de salida de nivel (Aparece al terminar el capítulo) -->
+            <div class="menu-navegacion" id="menuSalida">
+                <p class="texto-ruta">¿A dónde quieres viajar ahora?</p>
+                <!-- Primer botón (Ir al planeta vecino) -->
+                <button class="boton-enlace boton-siguiente" id="btnSiguiente" onclick="siguientePlaneta()">Ir al planeta vecino</button>
+                <!-- Segundo botón (Volver) -->
+                <button class="boton-enlace boton-volver" id="btnVolver" onclick="volverInicio()">Volver al asteroide b612</button>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- ENLACE A TU ARCHIVO DE JAVASCRIPT EXTERNO -->
+    <script src="negocios.js"></script>
+</body>
+</html>
