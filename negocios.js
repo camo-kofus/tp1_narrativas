@@ -1,7 +1,7 @@
 // --- BASE DE DATOS DE ESTE PLANETA ---
 const capitulo = {
-    titulo: "Nivel 2.1: El planeta del Hombre de Negocios",
-    cita: "Pequeña ilustración con la portada del planeta y descripción o cita.",
+    titulo: "Planeta del Hombre de Negocios",
+    cita: "Sigamos adelante",
     dialogos: [
         "—¡Tres y dos cinco! Cinco y siete doce... ¡Buen día! El juego no se detiene.",
         "—¿Tres y dos cinco? ¿Cinco millones de qué? —preguntó el Principito.",
@@ -55,7 +55,7 @@ function avanzarDialogo() {
 
 // Redirige al siguiente archivo HTML independiente
 function siguientePlaneta() {
-    window.location.href = "farolero.html"; 
+    window.location.href = "tierra.html"; 
 }
 
 // Redirige al inicio del juego
