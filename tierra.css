@@ -1,0 +1,59 @@
+ ===== RESET para que no queden márgenes blancos ===== 
+html, body {
+  margin 0;
+  padding 0;
+  width 100%;
+  min-height 100%;
+  font-family 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display flex;
+  justify-content center;
+
+   --- IMAGEN DE FONDO ---
+     Reemplazá la url() por la ruta o el link de tu imagen 
+  background-color #0b0f19;
+  background-image url(httpsres.cloudinary.comxoktvuw1imageuploadv1790128973otrofondo.jpg);
+  background-size cover;
+  background-position center;
+  background-repeat no-repeat;
+}
+
+ Estilos para el texto de arriba del botón 
+.texto-acercarse {
+  font-size 20px;           Tamaño de la letra 
+  font-weight bold;         Hace la letra más gruesadestacada 
+  color #ffffff;            Color blanco para que resalte sobre el fondo 
+  text-align center;        Lo centra perfectamente con el botón 
+  margin 0 0 15px 0;        Corregido Elimina márgenes extra y deja 15px limpios ABAJO antes del botón 
+  text-shadow 0 2px 4px rgba(0, 0, 0, 0.6);  Le da una pequeña sombra negra a las letras para que se lean bien sobre el cielo azul 
+}
+
+.contenedor-webtoon {
+  width 100%;
+  max-width 500px;
+  min-height 100vh;
+  padding 20px;
+  box-sizing border-box;
+  display flex;
+  flex-direction column;     NUEVO Ordena el texto arriba y el botón abajo 
+  align-items center;        NUEVO Centra ambos elementos milimétricamente en el eje horizontal 
+  justify-content center;    Centra la escena verticalmente en la loma verde 
+}
+
+.boton-entrar {
+  display inline-block;
+  padding 16px 48px;
+  border-radius 30px;
+  border 2px solid #fff;
+  background-color rgba(0, 0, 0, 0.5);
+  color #fff;
+  font-size 18px;
+  font-weight bold;
+  text-decoration none;
+  text-align center;
+  cursor pointer;
+  transition background-color 0.2s ease-in-out;
+}
+
+.boton-entrarhover {
+  background-color rgba(0, 0, 0, 0.75);
+}

@@ -1,0 +1,133 @@
+/* ========================================================
+   1. RESET Y ESTRUCTURA RESPONSIVE (Estilo Webtoon Fijo)
+   ======================================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;       /* Centra el Webtoon en monitores de PC */
+  background-color: #70caee; 
+}
+
+.contenedor-webtoon {
+  width: 100%;
+  max-width: 500px;          /* Ancho estricto de pantalla móvil */
+  height: 100vh;             /* Alto total de la pantalla */
+  max-height: 900px;         /* Límite de alto para que no se deforme en pantallas gigantes */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Personajes y diálogos alineados abajo */
+  gap: 20px;
+  position: relative;
+
+  /* --- IMAGEN DE FONDO (Atrapada dentro del formato Webtoon) --- */
+  background-image: url("https://res.cloudinary.com/xoktvuw1/image/upload/v1790128973/otrofondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); /* Sombra elegante en PC */
+}
+
+/* ========================================================
+   2. ESCENA DE PERSONAJES (Alineación y proporciones)
+   ======================================================== */
+.escena-personajes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Ambos personajes pisan la misma línea base */
+}
+
+.personaje {
+  width: 45%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.personaje img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;       /* Evita que las ilustraciones a lápiz se deformen */
+}
+
+/* --- AJUSTE INDEPENDIENTE PARA EL ZORRO --- */
+#imgZorro {
+  /* translate(-50px, 55px): Mueve al zorro a la izquierda y lo baja al pasto */
+  transform: translate(-50px, 55px); 
+}
+
+#imgZorro img {
+  width: 200px;              /* Controla el tamaño del zorro de forma segura */
+  height: auto;
+}
+
+/* ========================================================
+   3. CAJA DE DIÁLOGOS INTERACTIVA
+   ======================================================== */
+.caja-dialogo {
+  width: 100%;
+  background-color: rgba(19, 26, 38, 0.9); /* Fondo semi-transparente oscuro */
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 110px;
+  font-size: 18px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  z-index: 10;                /* Asegura que quede siempre por encima de las imágenes */
+}
+
+.caja-dialogo:hover {
+  background-color: rgba(36, 51, 77, 0.9);
+}
+
+.instruccion {
+  font-size: 12px;
+  color: #93c5fd;
+  text-align: right;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========================================================
+   4. BOTÓN VOLVER AL INICIO (Aparece al terminar)
+   ======================================================== */
+.menu-salida {
+  display: none;             /* Lo controla el script de JS al terminar las frases */
+  width: 100%;
+  margin-top: 15px;
+  z-index: 10;
+}
+
+.boton-volver {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3b82f6; /* Color azul original */
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Difuminado suave idéntico */
+}
+
+.boton-volver:hover {
+  background-color: #1d4ed8; /* Cambia a azul oscuro al pasar el cursor */
+}

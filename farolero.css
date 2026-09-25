@@ -1,0 +1,173 @@
+/* Estilos visuales optimizados para Webtoon móvil */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #77B5FE; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://res.cloudinary.com/xoktvuw1/image/upload/v1790127622/fondocuatro.jpg");
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-webtoon {
+    width: 100%;
+    max-width: 500px; /* Ancho estándar de webtoon en pantallas móviles */
+    background-image: url("https://res.cloudinary.com/xoktvuw1/image/upload/v1790127622/fondocuatro.jpg");
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para la portada de cada planeta */
+.portada-planeta {
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.portada-planeta h1 {
+    font-size: 24px;
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+.descripcion-planeta {
+    font-style: italic;
+    color: #a1a1aa;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de la escena de juego */
+.escena-interactiva {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Distribución de los personajes PNG lado a lado */
+.escena-personajes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.personaje {
+    width: 45%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Colores de marcador de fondo para tus PNGs */
+.principito-placeholder { background-color: #3a7bd5; }
+.adulto-placeholder { background-color: #e65c00; }
+
+.personaje img {
+    width: 120%;
+    height: 120%;
+    object-fit: contain; /* Ajusta tus PNGs transparentes dentro del cuadro de color */
+}
+
+/* Caja de diálogo inferior interactiva */
+.caja-dialogo {
+    width: 100%;
+    background-color: #1f293d;
+    border: 2px solid #3b82f6;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 130px;
+    font-size: 18px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.caja-dialogo:hover {
+    background-color: #24334d;
+}
+
+.instruccion {
+    font-size: 12px;
+    color: #93c5fd;
+    text-align: right;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- CLASE GENERAL DE BOTONES --- */
+.boton-enlace {
+    display: block;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease-in-out; /* Controla el difuminado suave */
+}
+
+/* BOTÓN IR AL PLANETA VECINO (VERDE) */
+.boton-siguiente {
+    background-color: #10b981; 
+}
+
+.boton-siguiente:hover { 
+    background-color: #059669; /* Verde oscuro difuminado */
+}
+
+/* BOTÓN VOLVER (AZUL) */
+.boton-volver {
+    margin-top: 15px; /* Crea la separación exacta */
+    background-color: #3b82f6;  
+}
+
+.boton-volver:hover {
+    background-color: #1d4ed8; /* Azul oscuro difuminado en sincronía */
+}
+/* Color por defecto para el botón de la portada */
+.boton-portada {
+    background-color: #7c3aed; /* Puedes cambiar este código por el color que te guste */
+}
+
+/* El difuminado suave al pasar el cursor encima */
+.boton-portada:hover {
+    background-color: #6d28d9; /* Un tono más oscuro del mismo color */
+}
+
+/* Menú de salida (Oculto al inicio) */
+.menu-navegacion {
+    display: none;
+    width: 100%;
+    margin-top: 25px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.texto-ruta {
+    text-align: center;
+    color: #a1a1aa;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

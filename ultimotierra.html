@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diálogo - El Principito</title>
+<link rel="stylesheet" href="ultimotierra.css">
+</head>
+<body>
+
+<div class="contenedor-webtoon">
+
+  <!-- ===== PERSONAJES (PNG con fondo transparente) ===== -->
+  <div class="escena-personajes">
+    <div class="personaje">
+      <!-- Reemplazá el src por la ruta de tu primer PNG -->
+      <img src="https://res.cloudinary.com/xoktvuw1/image/upload/v1790127578/5.principito.png" alt="Personaje 1">
+    </div>
+    <!-- MODIFICADO: Se le asignó el id al contenedor del zorro -->
+    <div class="personaje" id="imgZorro">
+      <!-- Reemplazá el src por la ruta de tu segundo PNG -->
+      <img src="https://res.cloudinary.com/xoktvuw1/image/upload/v1790127584/zorro.png" alt="Personaje 2">
+    </div>
+  </div>
+
+  <!-- ===== CAJA DE DIÁLOGO (avanza al hacer clic) ===== -->
+  <div class="caja-dialogo" id="cajaDialogo">
+    <p id="textoDialogo"></p>
+    <div class="instruccion" id="instruccionToca">Toca para continuar</div>
+  </div>
+
+  <!-- ===== BOTÓN VOLVER (aparece al terminar el diálogo) ===== -->
+  <div class="menu-salida" id="menuSalida">
+    <!-- Reemplazá "index.html" por el archivo real del mapa/inicio -->
+    <a href="index.html" class="boton-volver">Volver al inicio</a>
+  </div>
+
+</div>
+
+<script src="ultimotierra.js"></script>
+</body>
+</html> 

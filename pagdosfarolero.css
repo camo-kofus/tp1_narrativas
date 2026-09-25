@@ -1,0 +1,99 @@
+/* ===== RESET para que no queden márgenes blancos ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+
+  /* mismo fondo que la página, para que rellene
+     los costados si la pantalla es más ancha que 500px */
+  background-color: #77B5FE; /* <-- cambiá este color por el tono que quieras */
+  background-image: url("https://res.cloudinary.com/xoktvuw1/image/upload/v1790127622/fondocuatro.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===== CONTENEDOR PRINCIPAL (formato webtoon, vertical) ===== */
+.planeta-page {
+  width: 100%;
+  max-width: 500px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+  /* --- ACÁ VA TU IMAGEN DE FONDO ---
+     Reemplazá la url() por la ruta o el nombre de tu jpg,
+     y el color de background-color por el tono que uses arriba */
+  background-color: #77B5FE;
+  background-image: url("https://res.cloudinary.com/xoktvuw1/image/upload/v1790127622/fondocuatro.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  font-family: sans-serif;
+}
+
+/* ===== VIDEO ROTADO (fuente 1920x1080 -> se ve vertical) ===== */
+.video-wrapper {
+  position: relative;
+  width: 300px;      /* ancho final ya "vertical" en pantalla */
+  height: 533px;      /* alto final (proporción 16:9 rotada) */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 533px;        /* el video mantiene su tamaño horizontal real */
+  height: 300px;
+  transform: translate(-50%, -50%) rotate(90deg);
+  object-fit: cover;
+}
+
+/* si tu video ya está grabado/exportado en vertical,
+   borrá el rotate(90deg) de arriba y listo */
+
+/* ===== BOTÓN PLAY/PAUSE (redondo, sobre el video) ===== */
+.btn-play {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ===== BOTÓN ENTRAR AL SIGUIENTE PLANETA ===== */
+.btn-entrar {
+  padding: 14px 36px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-entrar:hover {
+  background: rgba(0,0,0,0.75);
+}
